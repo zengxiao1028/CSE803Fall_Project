@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     for class_name, keyword in classes:
 
-        google_crawler = GoogleImageCrawler(parser_threads=2, downloader_threads=4,
+        google_crawler = GoogleImageCrawler(parser_threads=4, downloader_threads=8,
                                             storage={'root_dir': './dataset/downloaded_images/' + class_name})
         google_crawler.crawl(keyword=keyword, max_num=1000,
                              date_min=None, date_max=None,
